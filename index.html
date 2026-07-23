@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7/24 出發日作戰手冊｜Zakopane → Dunavarsány</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚐</text></svg>">
+<style>
+  :root{
+    --bg:#f7f5f0; --card:#ffffff; --ink:#2b2b2b; --muted:#6b6b6b;
+    --green:#2e7d32; --red:#c62828; --amber:#e65100; --blue:#1565c0;
+    --line:#e4ded4;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.7; padding-bottom:60px;}
+  .wrap{max-width:760px; margin:0 auto; padding:0 14px;}
+  header{background:#1b3a2d; color:#fff; padding:26px 14px 22px; text-align:center;}
+  header h1{font-size:1.35rem; letter-spacing:1px;}
+  header .sub{opacity:.85; font-size:.9rem; margin-top:6px;}
+  header .route{margin-top:10px; font-size:1.05rem; font-weight:700; color:#ffd54f;}
+  nav.toc{background:var(--card); border:1px solid var(--line); border-radius:12px;
+    margin:14px auto; padding:12px 16px; font-size:.9rem;}
+  nav.toc a{color:var(--blue); text-decoration:none; display:inline-block; margin:2px 10px 2px 0;}
+  section{background:var(--card); border:1px solid var(--line); border-radius:12px;
+    margin:14px 0; padding:16px; scroll-margin-top:10px;}
+  h2{font-size:1.12rem; margin-bottom:10px; padding-bottom:8px; border-bottom:2px solid var(--line);}
+  h3{font-size:1rem; margin:14px 0 6px;}
+  .tag{display:inline-block; font-size:.72rem; padding:1px 8px; border-radius:99px; color:#fff; vertical-align:middle;}
+  .t-red{background:var(--red);} .t-green{background:var(--green);} .t-amber{background:var(--amber);} .t-blue{background:var(--blue);}
+  table{width:100%; border-collapse:collapse; font-size:.88rem; margin:8px 0;}
+  th,td{border:1px solid var(--line); padding:7px 8px; text-align:left; vertical-align:top;}
+  th{background:#f0ece3;}
+  .timeline{list-style:none;}
+  .timeline li{position:relative; padding:6px 0 6px 88px; border-left:0; min-height:34px;}
+  .timeline .t{position:absolute; left:0; top:8px; width:74px; font-weight:700; color:var(--green); font-size:.9rem;}
+  .timeline li+li{border-top:1px dashed var(--line);}
+  .gate{border:2px solid var(--red); border-radius:10px; padding:12px 14px; margin:10px 0; background:#fff6f6;}
+  .gate h3{color:var(--red); margin-top:0;}
+  .ok{border-color:var(--green); background:#f4fbf4;}
+  .ok h3{color:var(--green);}
+  ol.big li, ul.big li{margin:6px 0 6px 0;}
+  ol.big, ul.big{padding-left:22px;}
+  .msg{position:relative; background:#0f2418; color:#d9f2df; border-radius:10px;
+    padding:14px; margin:10px 0; font-size:.86rem; white-space:pre-wrap; word-break:break-word;
+    font-family:Consolas,Menlo,monospace;}
+  .msg .copybtn{position:absolute; top:8px; right:8px; background:#2e7d32; color:#fff;
+    border:0; border-radius:6px; padding:4px 12px; font-size:.8rem; cursor:pointer;}
+  .msg .copybtn:active{background:#1b5e20;}
+  .zh{font-size:.85rem; color:var(--muted); margin:-4px 0 12px; padding-left:4px;}
+  .warn{background:#fff8e1; border-left:4px solid var(--amber); padding:10px 12px; border-radius:0 8px 8px 0; margin:10px 0; font-size:.92rem;}
+  .info{background:#e8f1fb; border-left:4px solid var(--blue); padding:10px 12px; border-radius:0 8px 8px 0; margin:10px 0; font-size:.92rem;}
+  .danger{background:#fdecec; border-left:4px solid var(--red); padding:10px 12px; border-radius:0 8px 8px 0; margin:10px 0; font-size:.92rem;}
+  .waypoint{display:flex; gap:10px; padding:8px 0; border-bottom:1px dashed var(--line); font-size:.92rem;}
+  .waypoint:last-child{border-bottom:0;}
+  .waypoint .num{flex:0 0 26px; height:26px; border-radius:50%; background:var(--green); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.8rem;}
+  .waypoint.border .num{background:var(--amber);}
+  .waypoint.stop .num{background:var(--blue);}
+  .phone{font-weight:700; font-family:Consolas,monospace; white-space:nowrap;}
+  a{color:var(--blue);}
+  footer{text-align:center; color:var(--muted); font-size:.8rem; margin-top:24px;}
+  @media (max-width:480px){
+    .timeline li{padding-left:76px;}
+    .timeline .t{width:66px; font-size:.82rem;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🚐 出發日作戰手冊</h1>
+  <div class="sub">7月24日（星期五）｜全家 8 人＋5 箱行李＋推車</div>
+  <div class="route">Zakopane → Orava 城堡 → Dunavarsány（布達佩斯南）</div>
+</header>
+
+<div class="wrap">
+
+<nav class="toc">
+  <b>快速跳轉：</b>
+  <a href="#timeline">時間軸</a>
+  <a href="#gate">上車前4道關卡</a>
+  <a href="#msgs">訊息範本</a>
+  <a href="#money">金錢</a>
+  <a href="#route">路線確認點</a>
+  <a href="#scenery">沿途風景</a>
+  <a href="#police">臨檢應對</a>
+  <a href="#planb">Plan B</a>
+  <a href="#contacts">聯絡簿</a>
+</nav>
+
+<!-- ============ 時間軸 ============ -->
+<section id="timeline">
+  <h2>📅 全日時間軸（預估）</h2>
+  <ul class="timeline">
+    <li><span class="t">08:30</span>行李打包完、<b>8 本護照集中一袋</b>放隨手處、手機充飽電</li>
+    <li><span class="t">08:55</span>在 Nowita（ul. Podhalańska 48）門口等車</li>
+    <li><span class="t">09:00</span>司機到 → <b>先過下面的 4 道關卡再上行李</b></li>
+    <li><span class="t">09:10</span>全過 → 出發；<span class="tag t-red">立刻發取消訊息給 10:30 那家</span></li>
+    <li><span class="t">09:15</span>Zakopane 市區停 ATM 領現金（若付 PLN）；司機順便線上買兩國通行證</li>
+    <li><span class="t">~10:00</span>Chyżne 過境進斯洛伐克（申根，通常直接開過）</li>
+    <li><span class="t">~10:45</span>🏰 <b>Orava 城堡</b>（停約 1.5 小時，門票自理）</li>
+    <li><span class="t">~13:15</span>🍽️ <b>Salaš Krajinka</b> 午餐（Ružomberok 附近，只收現金，斯國用歐元）</li>
+    <li><span class="t">~14:15</span>續行：Donovaly 山口 → Banská Bystrica → Zvolen → Šahy 邊境</li>
+    <li><span class="t">~16:30</span>進匈牙利（若加 Esztergom 大教堂：多 40–60 分鐘）</li>
+    <li><span class="t">17:00–19:00</span>🏁 抵達 Csermely utca 32/A, Dunavarsány → <b>此時才付司機錢</b></li>
+    <li><span class="t">當晚</span>民宿 Gajó 付現金 <b>€239.36</b>；跟 Claude 回報平安 🎉</li>
+  </ul>
+</section>
+
+<!-- ============ 4 道關卡 ============ -->
+<section id="gate">
+  <h2>🚧 09:00 上車前 4 道關卡</h2>
+  <div class="danger"><b>鐵律：4 關全過才把行李搬上車。任何一關不過 → 請司機離開，等 10:30 的備援車（2700 zł，Citroën Spacetourer，含兒童座椅）。</b></div>
+  <div class="gate">
+    <h3>關卡 1｜車輛</h3>
+    真的是 <b>9 人座</b>（8 客座＋司機）？8 個人＋5 個 24 吋箱＋背包＋推車<b>實際裝進去</b>試給你看，不是用嘴巴說裝得下。
+  </div>
+  <div class="gate">
+    <h3>關卡 2｜兒童座椅</h3>
+    2.5 歲用的安全座椅<b>此刻就在車上</b>且能正確安裝——不接受「等一下去拿」「路上再借」。
+  </div>
+  <div class="gate">
+    <h3>關卡 3｜價格口頭複述</h3>
+    司機當面複述一次：「<b>1700 zł 總價、到 Dunavarsány 才付、沒有任何額外費用</b>」。眼神閃爍、改口加價 → 不過關。
+  </div>
+  <div class="gate">
+    <h3>關卡 4｜書面確認在手機裡</h3>
+    出發前你手機裡要有他回覆的 SMS：「<b>POTWIERDZAM 1700 zł</b>」＋司機姓名＋車牌。到場時<b>核對車牌與 SMS 一致</b>。
+  </div>
+  <div class="gate ok">
+    <h3>✅ 全過之後（依序做）</h3>
+    ① 行李上車 → ② 小孩上座椅繫好 → ③ 車開動 → ④ <b>馬上發「取消 10:30」訊息</b>（範本在下面）→ ⑤ 手機開 Google Maps 設終點跟著看路線。
+  </div>
+</section>
+
+<!-- ============ 訊息範本 ============ -->
+<section id="msgs">
+  <h2>📱 訊息範本（點「複製」直接貼上）</h2>
+
+  <h3>① 給 9:00 司機的總確認 SMS <span class="tag t-green">出發前務必收到他回覆</span></h3>
+  <div class="msg"><button class="copybtn" onclick="cp(this)">複製</button>Dzień dobry, potwierdzam nasz transfer DZISIAJ (piątek 24.07):
+
+- Odbiór 9:00: ul. Podhalańska 48, Zakopane (Nowita)
+- Najpierw krótki postój przy bankomacie w Zakopanem
+- Potem: Zamek Orawski (postój ok. 1,5 godz.) + obiad w Salaš Krajinka koło Ružomberka (ok. 45-60 min)
+- Cel: Csermely utca 32/A, 2336 Dunavarsány, Węgry (ok. 25 km za Budapesztem)
+- 8 osób (6 dorosłych + 2 dzieci: 6 lat i 2,5 roku) + fotelik dla dziecka 2,5 roku
+- Bagaż: 5 walizek 24" + plecaki + wózek składany
+- CENA CAŁKOWITA: 1700 zł za wszystko (winiety, paliwo, wszystkie postoje) - bez żadnych dodatkowych opłat
+- Płatność: gotówką po przyjeździe na miejsce
+
+Proszę o odpowiedź SMS: "POTWIERDZAM 1700 zl" + imię kierowcy + numer rejestracyjny samochodu. Dziękujemy!</div>
+  <p class="zh">中文：確認今天行程（接送點、ATM 停留、城堡＋午餐、終點、人數座椅行李、總價 1700 無額外費用、到達付款），請回覆「確認 1700」＋姓名＋車牌。</p>
+
+  <h3>② 追加問題（Esztergom＋付款幣別）</h3>
+  <div class="msg"><button class="copybtn" onclick="cp(this)">複製</button>Jeszcze dwie rzeczy:
+1) Prosimy też o krótki postój w Esztergom (bazylika, ok. 45-60 min) przed Dunavarsány - czy to też w cenie 1700 zł?
+2) Płatność: możemy zapłacić 1700 zł w PLN albo 400 EUR - co Pan woli? (Jeśli PLN - najpierw postój przy bankomacie.)</div>
+  <p class="zh">中文：①Esztergom 大教堂短停 45–60 分也含在 1700 嗎？②付 1700 zł 還是 €400 你選（要 PLN 就先停 ATM）。</p>
+
+  <h3>③ 出發時提醒通行證 <span class="tag t-amber">菜鳥司機最容易漏</span></h3>
+  <div class="msg"><button class="copybtn" onclick="cp(this)">複製</button>Winiety na Słowację i Węgry kupi Pan online czy na stacji po granicy? Na Węgrzech kategoria D2 dla busa 9-osobowego!</div>
+  <p class="zh">中文：兩國通行證你要線上買還是過境後加油站買？匈牙利要買 <b>D2 類</b>（9 人座）不是轎車的 D1！</p>
+
+  <h3>④ 取消 10:30 備援車 <span class="tag t-red">時機＝9:00 的車實際開動之後才發！</span></h3>
+  <div class="msg"><button class="copybtn" onclick="cp(this)">複製</button>Dzień dobry, bardzo przepraszamy - musimy odwołać dzisiejszy transfer o 10:30, znaleźliśmy inne rozwiązanie. Przepraszamy za późną informację i bardzo dziękujemy za Państwa pomoc i szybkie odpowiedzi. Pozdrawiamy!</div>
+  <p class="zh">中文：非常抱歉必須取消今天 10:30 的接送，我們已有其他安排；抱歉這麼晚通知，感謝你們的協助。<br>發送對象：<span class="phone">+48 601 883 037</span>（zakopanetaxi24）— 用太太的 WhatsApp 或 SMS。</p>
+
+  <h3>⑤ 路上應急句子</h3>
+  <div class="msg"><button class="copybtn" onclick="cp(this)">複製</button>Prosimy o krótki postój na toaletę dla dzieci. = 請停一下，小孩要上廁所
+Proszę jechać trochę wolniej, dziecko źle się czuje. = 請開慢一點，小孩不舒服
+To nie jest cena, którą Pan potwierdził SMS-em: 1700 zł za wszystko. = 這不是你 SMS 確認的價格：1700 全包
+Prosimy o klimatyzację. = 請開冷氣</div>
+</section>
+
+<!-- ============ 金錢 ============ -->
+<section id="money">
+  <h2>💰 金錢清單</h2>
+  <table>
+    <tr><th>項目</th><th>金額</th><th>注意</th></tr>
+    <tr><td>包車費</td><td><b>1700 zł</b>（或談定 €400）</td><td><b>抵達 Dunavarsány 才付</b>，一毛不先付</td></tr>
+    <tr><td>民宿 Gajó</td><td><b>€239.36 現金</b></td><td>只收現金，歐元已在手上</td></tr>
+    <tr><td>Orava 城堡門票</td><td>全票約 €12–15/人，家庭票現場看</td><td>自理，可刷卡</td></tr>
+    <tr><td>Salaš Krajinka 午餐</td><td>8 人約 €60–90</td><td><b>只收現金</b>（斯洛伐克用歐元）</td></tr>
+    <tr><td>緩衝現金</td><td>領 PLN 時多領 200–300</td><td>路上廁所、零食</td></tr>
+  </table>
+  <div class="warn">ATM 領錢時螢幕若問「Conversion / 以你的貨幣計價？」一律選 <b>NO / Without conversion</b>（用當地幣計價），匯率差很多。</div>
+</section>
+
+<!-- ============ 路線 ============ -->
+<section id="route">
+  <h2>🗺️ 路線確認點（跟著路牌檢查司機有沒有走對）</h2>
+  <div class="info">上車就開 Google Maps 設終點「Csermely utca 32/A, Dunavarsány」，藍線跟車輛位置一對照就知道有沒有偏離。以下路牌會依序出現：</div>
+  <div class="waypoint"><div class="num">1</div><div><b>Zakopane → Czarny Dunajec → Jabłonka</b>（波蘭鄉間路，約 50 分）</div></div>
+  <div class="waypoint border"><div class="num">2</div><div><b>Chyżne 邊境</b> 🛂 進斯洛伐克（申根，通常不停車）</div></div>
+  <div class="waypoint"><div class="num">3</div><div><b>Trstená → Tvrdošín</b>，接 59 號公路（E77）南下</div></div>
+  <div class="waypoint stop"><div class="num">4</div><div>🏰 <b>Oravský Podzámok＝Orava 城堡</b>（停 1.5 小時）</div></div>
+  <div class="waypoint"><div class="num">5</div><div><b>Dolný Kubín → Ružomberok</b></div></div>
+  <div class="waypoint stop"><div class="num">6</div><div>🍽️ <b>Salaš Krajinka</b> 午餐（59 號公路邊、大停車場）</div></div>
+  <div class="waypoint"><div class="num">7</div><div><b>Donovaly 山口</b>（山路彎多注意暈車）→ <b>Banská Bystrica</b> → R1 快速路 → <b>Zvolen</b></div></div>
+  <div class="waypoint"><div class="num">8</div><div><b>Krupina →</b> 66 號公路南下</div></div>
+  <div class="waypoint border"><div class="num">9</div><div><b>Šahy 邊境</b> 🛂 進匈牙利（若走 Esztergom 版：Zvolen 改往 Levice → Štúrovo 過橋 → Esztergom 大教堂 → 10 號路）</div></div>
+  <div class="waypoint"><div class="num">10</div><div><b>Vác → M2 高速 → M0 環城</b>（繞過布達佩斯東南）→ 51 號公路</div></div>
+  <div class="waypoint stop"><div class="num">11</div><div>🏁 <b>Dunavarsány, Csermely utca 32/A</b>（付款！檢查車上東西全帶下車）</div></div>
+  <div class="warn">全程約 420 公里、純開車約 5.5 小時。方向感檢查法：<b>前半天太陽應大致在車頭左前方（往南開）</b>；路牌關鍵字依序 Trstená → Dolný Kubín → Ružomberok → Banská Bystrica → Šahy → Vác / Budapest。</div>
+</section>
+
+<!-- ============ 風景 ============ -->
+<section id="scenery">
+  <h2>🏞️ 沿途風景亮點（跟孩子說故事用）</h2>
+  <ul class="big">
+    <li><b>出發後 30 分鐘（右側回望）</b>：塔特拉山全景道別——離開 Zakopane 往北的路上回頭看，是這趟山區假期的最後一眼雪線群峰。</li>
+    <li><b>Orava 城堡</b>：斯洛伐克最上鏡的城堡，建在 112 公尺高的懸崖上；1922 年吸血鬼默片《諾斯費拉圖》就在這拍的——跟 6 歲的說「這是吸血鬼城堡」保證精神。爬到頂層樓梯多，推車留車上、2.5 歲用揹的。</li>
+    <li><b>Orava 河谷</b>：城堡下的河可以看木筏；59 號公路沿線是傳統斯洛伐克木屋村落。</li>
+    <li><b>Salaš Krajinka</b>：吃飯時隔著玻璃牆看羊圈餵羊，飯後外面有空間讓小孩放電。</li>
+    <li><b>Donovaly 山口</b>：低塔特拉山國家公園邊緣的高山草原景觀，冬天是滑雪場；這段彎路風景最好、也最容易暈車——上車前讓小孩坐好位置。</li>
+    <li><b>（若停）Esztergom 大教堂</b>：匈牙利最大教堂，圓頂就立在多瑙河邊；站在前面看對岸就是斯洛伐克——「一條河兩個國家」。</li>
+    <li><b>匈牙利段</b>：山地漸變成無邊的潘諾尼亞大平原＋向日葵田，跟小孩玩「誰先看到向日葵」。</li>
+  </ul>
+</section>
+
+<!-- ============ 臨檢 ============ -->
+<section id="police">
+  <h2>👮 邊境／臨檢應對</h2>
+  <ul class="big">
+    <li>波蘭→斯洛伐克→匈牙利都在<b>申根區</b>，平常直接開過；偶有防偷渡抽查，看到「滿車 8 人的廂型車」可能攔下看一眼。</li>
+    <li><b>你們的樣子就是最好的通行證</b>：兩個小小孩＋兒童座椅＋一車行李箱＝觀光家庭，查護照一兩分鐘就放行。</li>
+    <li>做好三件事：① 8 本護照集中放隨手可拿 ② 全員繫安全帶、小孩在座椅裡（這才是最常被開罰的點，罰司機） ③ 被攔就平靜配合，問什麼答什麼、簡短誠實即可。</li>
+    <li>營業執照類的問題是<b>司機的事、罰的也是司機</b>，乘客不會被罰。最壞情境只是耽誤時間。</li>
+  </ul>
+</section>
+
+<!-- ============ Plan B ============ -->
+<section id="planb">
+  <h2>🆘 Plan B 決策樹</h2>
+  <table>
+    <tr><th>狀況</th><th>行動</th></tr>
+    <tr><td>9:00 司機<b>沒出現</b>（等到 9:20）或<b>4 關沒過</b></td><td>不用慌——什麼都不用做，<b>等 10:30 的 zakopanetaxi24</b>（2700 zł、Citroën Spacetourer、含座椅、Orava +200 已含在 2700）。10:30 那家<b>千萬別提前取消</b>。</td></tr>
+    <tr><td>兩台都失敗（機率極低）</td><td><b>FlixBus 14:20 直達巴士</b>：Zakopane 巴士站（Chramcówki 35A，距住處 2 km）→ Budapest Népliget 21:10，約 €45/人、8 人有位。手機 FlixBus App 直接買。到 Népliget 後叫 2 台 Bolt XL 去 Dunavarsány。</td></tr>
+    <tr><td>半路司機出狀況（要加價／車故障）</td><td>錢還在你手上（到付），不讓步。拿出 SMS：「To nie jest cena, którą Pan potwierdził.」必要時就地下車叫當地計程車或回頭搭 FlixBus。斯洛伐克叫車：打 <span class="phone">112</span> 問或 Google「taxi + 所在城鎮名」。</td></tr>
+    <tr><td>民宿晚到</td><td>用 Booking App 訊息通知 Gajó 預計抵達時間即可。</td></tr>
+  </table>
+</section>
+
+<!-- ============ 聯絡簿 ============ -->
+<section id="contacts">
+  <h2>📞 聯絡簿</h2>
+  <table>
+    <tr><th>對象</th><th>電話</th><th>備註</th></tr>
+    <tr><td><b>9:00 司機（1700）</b></td><td class="phone">＿＿＿＿＿＿＿＿（自填）</td><td>把他的 SMS 確認截圖存相簿</td></tr>
+    <tr><td>10:30 備援 zakopanetaxi24</td><td class="phone">+48 601 883 037</td><td>Citroën Spacetourer / 2700 zł；官網另一支 <span class="phone">+48 513 350 141</span></td></tr>
+    <tr><td>備援② GregTrans</td><td class="phone">+48 609 761 642</td><td>2800 zł，Renault Trafic 2024，24/7</td></tr>
+    <tr><td>備援③ Mateja</td><td class="phone">+48 605 207 443</td><td>3000 zł / €700，車已備好</td></tr>
+    <tr><td>歐盟緊急電話</td><td class="phone">112</td><td>波蘭／斯洛伐克／匈牙利通用</td></tr>
+    <tr><td>民宿 Gajó</td><td>Booking App 訊息</td><td>Csermely utca 32/A, 2336 Dunavarsány；現金 €239.36；</td></tr>
+  </table>
+  <div class="info">💡 出發前把這頁加到手機主畫面（瀏覽器選單 →「加到主畫面」），路上沒網路也看得到快取版。</div>
+</section>
+
+<footer>7/24 Zakopane → Dunavarsány 出發日手冊｜祝一路平安 🚐💨</footer>
+</div>
+
+<script>
+function cp(btn){
+  var text = btn.parentElement.innerText.replace(/^複製\n?/, '');
+  navigator.clipboard.writeText(text).then(function(){
+    btn.textContent = '已複製 ✓';
+    setTimeout(function(){ btn.textContent = '複製'; }, 1500);
+  });
+}
+</script>
+</body>
+</html>
